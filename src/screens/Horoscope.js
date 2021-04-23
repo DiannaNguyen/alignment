@@ -96,7 +96,7 @@ const Horoscope = ({ route }) => {
 						}}>
 						{horoscopes}
 					</Text>
-					<View>
+					<View >
 						<Text
 							style={{
 								fontWeight: 'bold',
@@ -135,7 +135,7 @@ export default Horoscope;
 
 const styles = StyleSheet.create({
 	imageContainer: {
-		flex: 0.5,
+		flex: 1,
 		marginTop: 15,
 		justifyContent: 'center',
 		alignItems: 'center',
