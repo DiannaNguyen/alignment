@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Text, StyleSheet, View, Image, SafeAreaView } from 'react-native';
+import {
+	Text,
+	StyleSheet,
+	View,
+	Image,
+	SafeAreaView,
+	Button,
+} from 'react-native';
 import Colors from '../consts/colors';
 
 const Horoscope = ({ route }) => {
@@ -11,9 +18,10 @@ const Horoscope = ({ route }) => {
 	const [horoscopes, setHoroscopes] = useState(' ');
 	const [compat, setCompat] = useState(' ');
 	const [mood, setMood] = useState(' ');
-	const [yesDate, setYesDate] = useState(' ');
-	const [yesHoroscopes, setYesHoroscopes] = useState(' ');
-	const [yesMood, setYesMood] = useState(' ');
+
+	// const [yesDate, setYesDate] = useState(' ');
+	// const [yesHoroscopes, setYesHoroscopes] = useState(' ');
+	// const [yesMood, setYesMood] = useState(' ');
 
 	useEffect(() => {
 		fetch(todayURL, { method: 'POST' })
@@ -29,16 +37,16 @@ const Horoscope = ({ route }) => {
 				setMood(mood);
 			});
 
-		fetch(yesterdayURL, { method: 'POST' })
-			.then((response) => response.json())
-			.then((json) => {
-				const yesterday = json.current_date;
-				const description = json.description;
-				const mood = json.mood;
-				setYesDate(yesterday);
-				setYesHoroscopes(description);
-				setYesMood(mood);
-			});
+		// fetch(yesterdayURL, { method: 'POST' })
+		// 	.then((response) => response.json())
+		// 	.then((json) => {
+		// 		const yesterday = json.current_date;
+		// 		const description = json.description;
+		// 		const mood = json.mood;
+		// 		setYesDate(yesterday);
+		// 		setYesHoroscopes(description);
+		// 		setYesMood(mood);
+		// 	});
 	}, []);
 
 	return (
@@ -47,7 +55,7 @@ const Horoscope = ({ route }) => {
 				<Image source={sign.img} style={{ resizeMode: 'contain', flex: 1 }} />
 			</View>
 			<View style={styles.mainContainer}>
-				<View style={{ margin: 20, alignItems: 'center' }}>
+				<View style={{ alignItems: 'center' }}>
 					<Text
 						style={{
 							fontSize: 26,
@@ -64,11 +72,13 @@ const Horoscope = ({ route }) => {
 						}}>
 						{sign.date}
 					</Text>
-					<Text style={{ fontSize: 20, color: Colors.white }}>
+					<Text style={{ fontSize: 20, color: Colors.white, marginBottom: 20 }}>
 						{sign.element}
 					</Text>
 				</View>
-				<Text style={{marginLeft: 15, color: Colors.white, fontSize: 18 }}>Compatibility: {compat}</Text>
+				<Text style={{ marginLeft: 15, color: Colors.white, fontSize: 18 }}>
+					Compatibility: {compat}
+				</Text>
 				<View style={styles.horoscopeContainer}>
 					<Text
 						style={{
@@ -91,12 +101,12 @@ const Horoscope = ({ route }) => {
 					<Text
 						style={{
 							color: Colors.dark,
-							fontSize: 20,
+							fontSize: 18,
 							margin: 15,
 						}}>
 						{horoscopes}
 					</Text>
-					<View >
+					{/* <View style={styles.yesterdayContainer}>
 						<Text
 							style={{
 								fontWeight: 'bold',
@@ -107,6 +117,7 @@ const Horoscope = ({ route }) => {
 							}}>
 							{yesDate}
 						</Text>
+
 						<Text
 							style={{
 								marginLeft: 15,
@@ -115,16 +126,16 @@ const Horoscope = ({ route }) => {
 							}}>
 							Mood: {yesMood}
 						</Text>
+
 						<Text
 							style={{
 								color: Colors.dark,
-								fontSize: 20,
+								fontSize: 18,
 								margin: 15,
 							}}>
 							{yesHoroscopes}
 						</Text>
-					</View>
-					<View></View>
+					</View> */}
 				</View>
 			</View>
 		</SafeAreaView>
@@ -136,7 +147,7 @@ export default Horoscope;
 const styles = StyleSheet.create({
 	imageContainer: {
 		flex: 1,
-		marginTop: 15,
+		// marginTop: 15,
 		justifyContent: 'center',
 		alignItems: 'center',
 	},

@@ -37,7 +37,7 @@ const Home = ({ navigation }) => {
 						{signs.zodiac}
 					</Text>
 					<View style={{ marginTop: 5, paddingBottom: 10 }}>
-						<Text style={{ fontSize: 16, color: Colors.dark }}>{signs.date}</Text>
+						<Text style={{ fontSize: 14, color: Colors.dark }}>{signs.date}</Text>
 					</View>
 				</View>
 			</TouchableOpacity>
@@ -48,7 +48,7 @@ const Home = ({ navigation }) => {
 			<View style={styles.header}>
 				<Text
 					style={{
-						fontSize: 25,
+						fontSize: 22,
 						color: Colors.white,
 						fontWeight: 'bold',
 						padding: 10,
