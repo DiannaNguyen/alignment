@@ -44,7 +44,8 @@ const Home = ({ navigation }) => {
 		);
 	};
 	return (
-		<SafeAreaView style={{flex: 1, paddingHorizontal: 10, backgroundColor: Colors.light}}>
+		<SafeAreaView
+			style={{ flex: 1, paddingHorizontal: 10, backgroundColor: Colors.light }}>
 			<View style={styles.header}>
 				<Text
 					style={{
@@ -52,7 +53,7 @@ const Home = ({ navigation }) => {
 						color: Colors.white,
 						fontWeight: 'bold',
 						padding: 10,
-                        marginTop: 5,
+						marginTop: 5,
 					}}>
 					What is written in the stars today?
 				</Text>
@@ -65,9 +66,17 @@ const Home = ({ navigation }) => {
 					return <Container signs={item} />;
 				}}
 			/>
-            <View style={styles.footer}>
-                <Text style={{color: Colors.dark, fontSize: 12}}>Zodiac Images Designed by Lilla Bardenova via Dribbble</Text>
-            </View>
+			<View style={styles.footer}>
+				<Text style={{ color: Colors.dark, fontSize: 12 }}>
+					Zodiac Images Designed by Lilla Bardenova via Dribbble
+				</Text>
+				<Text style={{ color: Colors.dark, fontSize: 12 }}>
+					The content on this application is sourced by the aztro API.
+				</Text>
+				<Text style={{ color: Colors.dark, fontSize: 12 }}>
+					Created 2021, Dianna Nguyen
+				</Text>
+			</View>
 		</SafeAreaView>
 	);
 };

@@ -19,9 +19,9 @@ const Horoscope = ({ route }) => {
 	const [compat, setCompat] = useState(' ');
 	const [mood, setMood] = useState(' ');
 
-	// const [yesDate, setYesDate] = useState(' ');
-	// const [yesHoroscopes, setYesHoroscopes] = useState(' ');
-	// const [yesMood, setYesMood] = useState(' ');
+	const [yesDate, setYesDate] = useState(' ');
+	const [yesHoroscopes, setYesHoroscopes] = useState(' ');
+	const [yesMood, setYesMood] = useState(' ');
 
 	useEffect(() => {
 		fetch(todayURL, { method: 'POST' })
@@ -37,16 +37,16 @@ const Horoscope = ({ route }) => {
 				setMood(mood);
 			});
 
-		// fetch(yesterdayURL, { method: 'POST' })
-		// 	.then((response) => response.json())
-		// 	.then((json) => {
-		// 		const yesterday = json.current_date;
-		// 		const description = json.description;
-		// 		const mood = json.mood;
-		// 		setYesDate(yesterday);
-		// 		setYesHoroscopes(description);
-		// 		setYesMood(mood);
-		// 	});
+		fetch(yesterdayURL, { method: 'POST' })
+			.then((response) => response.json())
+			.then((json) => {
+				const yesterday = json.current_date;
+				const description = json.description;
+				const mood = json.mood;
+				setYesDate(yesterday);
+				setYesHoroscopes(description);
+				setYesMood(mood);
+			});
 	}, []);
 
 	return (
