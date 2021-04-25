@@ -85,7 +85,7 @@ const Horoscope = ({ route }) => {
 							fontWeight: 'bold',
 							marginTop: 15,
 							marginLeft: 15,
-							fontSize: 16,
+							fontSize: 18,
 							color: Colors.light,
 						}}>
 						{date}
@@ -94,48 +94,18 @@ const Horoscope = ({ route }) => {
 						style={{
 							marginLeft: 15,
 							marginTop: 5,
-							fontSize: 14,
+							fontSize: 16,
 						}}>
 						Mood: {mood}
 					</Text>
 					<Text
 						style={{
 							color: Colors.dark,
-							fontSize: 18,
+							fontSize: 22,
 							margin: 15,
 						}}>
 						{horoscopes}
 					</Text>
-					{/* <View style={styles.yesterdayContainer}>
-						<Text
-							style={{
-								fontWeight: 'bold',
-								marginTop: 15,
-								marginLeft: 15,
-								fontSize: 16,
-								color: Colors.light,
-							}}>
-							{yesDate}
-						</Text>
-
-						<Text
-							style={{
-								marginLeft: 15,
-								marginTop: 5,
-								fontSize: 14,
-							}}>
-							Mood: {yesMood}
-						</Text>
-
-						<Text
-							style={{
-								color: Colors.dark,
-								fontSize: 18,
-								margin: 15,
-							}}>
-							{yesHoroscopes}
-						</Text>
-					</View> */}
 				</View>
 			</View>
 		</SafeAreaView>
@@ -146,8 +116,7 @@ export default Horoscope;
 
 const styles = StyleSheet.create({
 	imageContainer: {
-		flex: 1,
-		// marginTop: 15,
+		flex: 0.6,
 		justifyContent: 'center',
 		alignItems: 'center',
 	},

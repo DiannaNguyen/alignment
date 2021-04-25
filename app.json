@@ -5,7 +5,6 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "splash": {
       "image": "./assets/splash1.png",
       "resizeMode": "contain",
@@ -28,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "See what the Sun, Moon, Stars, and Planets has to say about your day today by clicking on your rising (Sun) sign, your true self.",
+    "githubUrl": "https://github.com/DiannaNguyen/alignment"
   }
 }

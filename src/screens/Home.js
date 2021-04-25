@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import Colors from '../consts/colors';
 import signsData from '../consts/signsData';
+
 const width = Dimensions.get('window').width / 3 - 5;
 
 const Home = ({ navigation }) => {
