@@ -5,23 +5,17 @@ import {
 	View,
 	Image,
 	SafeAreaView,
-	Button,
 } from 'react-native';
 import Colors from '../consts/colors';
 
 const Horoscope = ({ route }) => {
 	const sign = route.params;
 	const todayURL = `https://aztro.sameerkumar.website/?sign=${sign.zodiac}&day=today`;
-	const yesterdayURL = `https://aztro.sameerkumar.website/?sign=${sign.zodiac}&day=yesterday`;
 
 	const [date, setDate] = useState(' ');
 	const [horoscopes, setHoroscopes] = useState(' ');
 	const [compat, setCompat] = useState(' ');
 	const [mood, setMood] = useState(' ');
-
-	const [yesDate, setYesDate] = useState(' ');
-	const [yesHoroscopes, setYesHoroscopes] = useState(' ');
-	const [yesMood, setYesMood] = useState(' ');
 
 	useEffect(() => {
 		fetch(todayURL, { method: 'POST' })
