@@ -5,12 +5,14 @@ See what the Sun, Moon, Stars, and Planets has to say about your day today by cl
 Alignment is an interactive application and was built using React Native that calls on a third-party API [aztro API](https://aztro.readthedocs.io/en/latest/) to render one's daily horoscope.
 
 # 0 to 100 - Wireframes and End Product
-Wireframes
+Wireframe:
+
 <img width="319" alt="Screen Shot 2021-04-16 at 10 41 16" src="https://media.git.generalassemb.ly/user/33381/files/56042400-9ea0-11eb-81d6-b8ee8f8659a0">
+<br>
+</br>
+Live Demo - End Product iOS and Android:
 
-Live Demo - End Product iOS and Android
 ![Animated GIF-downsized_large](https://media.git.generalassemb.ly/user/33381/files/1e7b4180-a62f-11eb-909c-4f4c6e61872a)
-
 ![Animated GIF-downsized (1)](https://media.git.generalassemb.ly/user/33381/files/e8dc5580-a63a-11eb-9264-ed3a042664eb)
 # Technologies Used 💻
 ## Design/Inspiration/Learning Tools
