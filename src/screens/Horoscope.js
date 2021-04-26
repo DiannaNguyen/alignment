@@ -36,17 +36,6 @@ const Horoscope = ({ route }) => {
 				setCompat(compat);
 				setMood(mood);
 			});
-
-		fetch(yesterdayURL, { method: 'POST' })
-			.then((response) => response.json())
-			.then((json) => {
-				const yesterday = json.current_date;
-				const description = json.description;
-				const mood = json.mood;
-				setYesDate(yesterday);
-				setYesHoroscopes(description);
-				setYesMood(mood);
-			});
 	}, []);
 
 	return (
