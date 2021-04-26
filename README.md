@@ -40,7 +40,7 @@ See the application, click this link: https://exp.host/@diannanguyen/Alignment a
 1. Fork and clone this repository
 2. Change into a new directory
 3. Install the dependencies with `npm i` or `npm install`
-4. Open with your text editor of choice and start the application through Expo (localhost) with `expo start`
+4. Open with your text editor of choice and start the application through Expo with `expo start` - if you don't have Expo installed already run `npm i --global expo-cli` first then run `expo start` in your terminal.
 5. Run iOS simulator with `i` or Android emulator with `a`
 
 # Contribution Guidelines
